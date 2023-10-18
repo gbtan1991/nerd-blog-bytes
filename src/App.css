@@ -1,0 +1,17 @@
+:root{
+  --gunmetal: #202c39ff;
+  --gunmetal-2: #283845ff;
+  --sage: #b8b08dff;
+  --peach-yellow: #f2d492ff;
+  --atomic-tangerine: #f29559ff;
+  --black: #111111ff;
+  --white: #f3f3f3ff;
+
+}
+
+body{
+  background-color: var(--white);
+  color: var(--white);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
