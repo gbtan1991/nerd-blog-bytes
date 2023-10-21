@@ -1,6 +1,7 @@
 import logo from '../public/geekGlasses.png'
 
 const Header = () => {
+
   return (
     <header className="">
     <div className="flex justify-around items-baseline p-6 border-b-4 border-zinc-700">
@@ -35,8 +36,22 @@ const Header = () => {
               Contact
             </a>
           </li>
+
+          <li>
+            <a
+              
+              className="text-gray-700 hover:text-gray-900 cursor-pointer"
+            >
+              +Add New Blog
+            </a>
+          </li>
         </ul>
       </nav>
+
+    
+
+
+
 
 
     </div>
