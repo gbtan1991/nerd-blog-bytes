@@ -17,9 +17,7 @@ const Home = () => {
 
     
 
-
     const handleDelete = (id) => {
-
       const newBlogs = blogs.filter(blog => blog.id !== id);
       const getTitle = blogs.filter(blog => blog.id === id);  
       const confirmation = window.confirm(`Are you sure you want to delete the blog ${getTitle[0].title}?`);
@@ -27,11 +25,12 @@ const Home = () => {
       if (confirmation) {
        setBlogs(newBlogs);
          
-      }
-      
-      
+      }      
     }
 
+  useEffect(() => {
+    console.log("use effect ran");
+  }, )
 
 
 
