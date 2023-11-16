@@ -1,82 +1,49 @@
-import React, { useState } from 'react'
-import Header from './Header.jsx'
-import BlogCarousel from './BlogCarousel.jsx'
+import React, { useState, useEffect } from "react";
+import Header from "./Header.jsx";
+import BlogCarousel from "./BlogCarousel.jsx";
 
 const Home = () => {
-
-  const [blogs, setBlogs] = useState([
-    {
-      id: 1,
-      title: 'Getting Started with React',
-      author: 'John Doe',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-      date: '2023-01-01',
-      time: '10:00 AM',
-      imageUrl: 'https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg',
-      imageAlt: 'React-Image',
-    },
-    {
-      id: 2,
-      title: 'CSS Best Practices',
-      author: 'Jane Smith',
-      content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...',
-      date: '2023-02-15',
-      time: '02:30 PM',
-      imageUrl:
-        'https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      imageAlt: 'CSS-Image',
-    },
-    {
-      id: 3,
-      title: 'JavaScript Fundamentals',
-      author: 'Bob Johnson',
-      content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...',
-      date: '2023-03-10',
-      time: '08:45 AM',
-      imageUrl:
-        'https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      imageAlt: 'Javascript-Image',
-    },
-    {
-      id: 4,
-      title: 'Responsive Web Design Techniques',
-      author: 'Alice Brown',
-      content: 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt...',
-      date: '2023-04-05',
-      time: '01:15 PM',
-      imageUrl: 'https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg',
-      imageAlt: 'Responsive-Image',
-    },
-    {
-      id: 5,
-      title: 'Node.js for Beginners',
-      author: 'Charlie Green',
-      content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse...',
-      date: '2023-05-20',
-      time: '11:30 AM',
-      imageUrl: 'https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg',
-      imageAlt: 'Nodejs-Image',
-    },
-  ]);
-
+  const [blogs, setBlogs] = useState(null);
 
   const handleDelete = (id) => {
-    const newBlogs = blogs.filter(blog => blog.id !== id);
+    const newBlogs = blogs.filter((blog) => blog.id !== id);
     setBlogs(newBlogs);
-    console.log(setBlogs(newBlogs));
-  }
+  };
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/blogs")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setBlogs(data);
+        setLoading(false);
+      })
+        
+      
+
+      .catch((error) => {
+        console.log("Error fetching data:", error);
+        setLoading(false);
+      });
+  }, []);
 
   return (
-    <div>   
-      <Header /> 
-      <BlogCarousel blogs={blogs} title="Recent Blogs" handleDelete={handleDelete}/>
-      <BlogCarousel blogs={blogs.filter((blog) => blog.author === "Jane Smith")} title="Jane Smith Blogs" />
+    <div>
+      <Header />
+        { loading && <div>Loading...</div>}
+      {blogs && (
+        <BlogCarousel 
+          blogs={blogs}
+          title="Recent Blogs" 
+          handleDelete={handleDelete}
+         />
+      )}
     
-        
-
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

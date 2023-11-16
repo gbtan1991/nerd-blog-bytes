@@ -2,87 +2,53 @@
   "blogs": [
     {
       "id": 1,
-      "title": "Exploring the Wonders of the Grand Canyon",
-      "body": "The Grand Canyon is a geological marvel that never ceases to amaze. Its vast, breathtaking landscapes draw visitors from all over the world.",
-      "author": "John Smith"
+      "title": "Getting Started with React",
+      "author": "John Doe",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      "date": "2023-01-01",
+      "time": "10:00 AM",
+      "imageUrl": "https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg",
+      "imageAlt": "React-Image"
     },
     {
       "id": 2,
-      "title": "The Art of Baking Perfect Sourdough Bread",
-      "body": "Baking sourdough bread is a delightful blend of science and art. Discover the secrets to creating that perfect, crusty loaf.",
-      "author": "Sarah Baker"
+      "title": "CSS Best Practices",
+      "author": "Jane Smith",
+      "content": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+      "date": "2023-02-15",
+      "time": "02:30 PM",
+      "imageUrl": "https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "imageAlt": "CSS-Image"
     },
     {
       "id": 3,
-      "title": "A Guide to Sustainable Gardening Practices",
-      "body": "Incorporating sustainable gardening practices can make your garden flourish while minimizing your environmental impact. Learn how to get started.",
-      "author": "Lisa Green"
+      "title": "JavaScript Fundamentals",
+      "author": "Bob Johnson",
+      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...",
+      "date": "2023-03-10",
+      "time": "08:45 AM",
+      "imageUrl": "https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "imageAlt": "Javascript-Image"
     },
     {
       "id": 4,
-      "title": "Space Exploration: The Next Frontier",
-      "body": "The exploration of space holds the key to the future of humanity. Join us as we delve into the latest discoveries and future missions.",
-      "author": "Michael Spacewalker"
+      "title": "Responsive Web Design Techniques",
+      "author": "Alice Brown",
+      "content": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt...",
+      "date": "2023-04-05",
+      "time": "01:15 PM",
+      "imageUrl": "https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg",
+      "imageAlt": "Responsive-Image"
     },
     {
       "id": 5,
-      "title": "Culinary Adventures in Tuscany",
-      "body": "Tuscany is a food lover's paradise. From delectable pastas to fine wines, we take you on a culinary journey through this Italian gem.",
-      "author": "Maria Rossi"
-    },
-    {
-      "id": 6,
-      "title": "The Art of Mindfulness: Finding Inner Peace",
-      "body": "Discover the transformative power of mindfulness and how it can help you find inner peace in our fast-paced world.",
-      "author": "Zen Master"
-    },
-    {
-      "id": 7,
-      "title": "Hiking the Inca Trail: A Journey to Machu Picchu",
-      "body": "Embark on an unforgettable adventure through the Inca Trail to reach the ancient wonder of Machu Picchu. Learn about the trail's history and significance.",
-      "author": "David Explorer"
-    },
-    {
-      "id": 8,
-      "title": "Unraveling the Mysteries of Ancient Egypt",
-      "body": "Step into the past as we delve into the rich history of ancient Egypt, exploring its pharaohs, pyramids, and enigmatic hieroglyphs.",
-      "author": "Emily Egyptologist"
-    },
-    {
-      "id": 9,
-      "title": "The Power of Renewable Energy Sources",
-      "body": "Renewable energy is changing the way we power our world. Discover the various sources and their environmental benefits.",
-      "author": "Andrew GreenTech"
-    },
-    {
-      "id": 10,
-      "title": "The World of Underwater Photography",
-      "body": "Dive into the mesmerizing world of underwater photography and capture the beauty of marine life through the lens of a camera.",
-      "author": "Jessica Photographer"
-    }, 
-    {
-      "id": 11,
-      "title": "The Marvels of the Amazon Rainforest",
-      "body": "Explore the breathtaking biodiversity and natural wonders of the Amazon Rainforest, a treasure trove of unique species and ecosystems.",
-      "author": "Carlos Rainforest"
-    },
-    {
-      "id": 12,
-      "title": "The World of Virtual Reality Gaming",
-      "body": "Step into the immersive world of virtual reality gaming and experience a new dimension of interactive entertainment.",
-      "author": "Linda Gamer"
-    },
-    {
-      "id": 13,
-      "title": "A Journey Through the Romantic Cities of Europe",
-      "body": "Discover the enchanting cities of Europe that have inspired love stories for centuries. From Paris to Venice, experience the romance.",
-      "author": "Oliver Wanderer"
-    },
-    {
-      "id": 14,
-      "title": "The Science of Climate Change: Understanding the Crisis",
-      "body": "Learn about the science behind climate change, its impact on the planet, and the urgent need for sustainable solutions to combat it.",
-      "author": "Dr. Sophia Climate"
+      "title": "Node.js for Beginners",
+      "author": "Charlie Green",
+      "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse...",
+      "date": "2023-05-20",
+      "time": "11:30 AM",
+      "imageUrl": "https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg",
+      "imageAlt": "Nodejs-Image"
     }
   ]
 }
