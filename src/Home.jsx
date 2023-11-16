@@ -60,10 +60,17 @@ const Home = () => {
   ]);
 
 
+  const handleDelete = (id) => {
+    const newBlogs = blogs.filter(blog => blog.id !== id);
+    setBlogs(newBlogs);
+    console.log(setBlogs(newBlogs));
+  }
+
+
   return (
     <div>   
       <Header /> 
-      <BlogCarousel blogs={blogs} title="Recent Blogs"/>
+      <BlogCarousel blogs={blogs} title="Recent Blogs" handleDelete={handleDelete}/>
       <BlogCarousel blogs={blogs.filter((blog) => blog.author === "Jane Smith")} title="Jane Smith Blogs" />
     
         
