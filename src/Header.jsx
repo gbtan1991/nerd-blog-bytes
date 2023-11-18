@@ -1,5 +1,5 @@
 import glasses from "./assets/geek-glasses.svg";
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,8 +11,8 @@ const Header = () => {
       </div>
       <div className="flex items-center font-mono">
         <ul className="flex flex-row gap-5 text-xl">
-        <li className="p-2">Home</li>
-        <li className="p-2">About</li>
+        <Link to="/"><li className="p-2">Home</li></Link>
+        <Link to="/About"><li className="p-2">About</li></Link>
         <li className="p-2">Blogs</li>
             <li className="bg-zinc-950 text-white p-2 shadow-retro shadow-teal-500">+Add New Blog</li>
         </ul>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, } from "react";
-import Header from "./Header.jsx";
 import BlogCarousel from "./BlogCarousel.jsx";
 import Error404 from "./Error404.jsx";
 import useFetch from "./useFetch.jsx";
@@ -16,7 +15,6 @@ const Home = () => {
 
   return (
     <div>
-      <Header />
       { error &&  <Error404 error={error}/>}
       { loading && <div className="flex items-center justify-center h-screen">
       <svg className="w-16 animate-rotate" viewBox="25 25 50 50">
