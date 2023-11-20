@@ -14,7 +14,7 @@ const Header = () => {
         <Link to="/"><li className="p-2">Home</li></Link>
         <Link to="/About"><li className="p-2">About</li></Link>
         <li className="p-2">Blogs</li>
-        {/* <Link to="/Create"><li className="bg-zinc-950 text-white p-2 shadow-retro shadow-teal-500">+Add New Blog</li></Link> */}
+        <Link to="/Create"><li className="bg-zinc-950 text-white p-2 shadow-retro shadow-teal-500">+Add New Blog</li></Link>
         </ul>
       </div>
       </div>
