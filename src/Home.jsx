@@ -2,6 +2,7 @@ import React, { useState, useEffect, } from "react";
 import BlogCarousel from "./BlogCarousel.jsx";
 import Error404 from "./Error404.jsx";
 import useFetch from "./useFetch.jsx";
+import Loading from "./Loading.jsx";
 
 
 const Home = () => {
@@ -16,10 +17,7 @@ const Home = () => {
   return (
     <div>
       { error &&  <Error404 error={error}/>}
-      { loading && <div className="flex items-center justify-center h-screen">
-      
-        Loading..
-    </div>}
+      { loading && <Loading />}
       {blogs && (
         <BlogCarousel 
           blogs={blogs}

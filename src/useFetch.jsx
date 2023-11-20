@@ -24,7 +24,7 @@ const useFetch = ( url ) => {
             console.log("Error fetching data:", error);
             setLoading(false);
             setError(error.message)
-          }, 100000);
+          }, 1000);
       }, []);
 
   return { data, loading, error, setData }
