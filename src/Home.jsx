@@ -17,14 +17,8 @@ const Home = () => {
     <div>
       { error &&  <Error404 error={error}/>}
       { loading && <div className="flex items-center justify-center h-screen">
-      <svg className="w-16 animate-rotate" viewBox="25 25 50 50">
-        <circle
-          className="stroke-current text-transparent stroke-2 stroke-dasharray-1-200 stroke-dashoffset-0 stroke-linecap-round animate-dash"
-          r="20"
-          cy="50"
-          cx="50"
-        ></circle>
-      </svg>
+      
+        Loading..
     </div>}
       {blogs && (
         <BlogCarousel 
