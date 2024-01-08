@@ -1,10 +1,12 @@
 import react from 'react'
+import Home from './Home'
+
 
 const App = () => {
 
   return (
     <div>
-      Welcome
+      <Home />
     </div>
   )
 

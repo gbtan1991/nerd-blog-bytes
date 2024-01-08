@@ -1,11 +1,75 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        dutch_white: {
+          DEFAULT: "#FFEDC7",
+          100: "#5b3e00",
+          200: "#b67c00",
+          300: "#ffb411",
+          400: "#ffd06c",
+          500: "#ffedc7",
+          600: "#fff1d2",
+          700: "#fff4dd",
+          800: "#fff8e9",
+          900: "#fffbf4",
+        },
+        mikado_yellow: {
+          DEFAULT: "#FDC50C",
+          100: "#352801",
+          200: "#695101",
+          300: "#9e7902",
+          400: "#d2a202",
+          500: "#fdc50c",
+          600: "#fdd03d",
+          700: "#fedc6e",
+          800: "#fee89e",
+          900: "#fff3cf",
+        },
+        outer_space: {
+          DEFAULT: "#48494B",
+          100: "#0e0f0f",
+          200: "#1d1d1e",
+          300: "#2b2c2d",
+          400: "#3a3b3c",
+          500: "#48494b",
+          600: "#6c6d70",
+          700: "#909295",
+          800: "#b5b6b8",
+          900: "#dadbdc",
+        },
+        black: {
+          DEFAULT: "#000000",
+          100: "#000000",
+          200: "#000000",
+          300: "#000000",
+          400: "#000000",
+          500: "#000000",
+          600: "#333333",
+          700: "#666666",
+          800: "#999999",
+          900: "#cccccc",
+        },
+        giants_orange: {
+          DEFAULT: "#FF5920",
+          100: "#390e00",
+          200: "#721d00",
+          300: "#ab2b00",
+          400: "#e43900",
+          500: "#ff5920",
+          600: "#ff784b",
+          700: "#ff9a78",
+          800: "#ffbca5",
+          900: "#ffddd2",
+        },
+      },
+
+      fontFamily: {
+        theme: "Genos, san-serif",
+      },
+    },
   },
   plugins: [],
-}
+};
