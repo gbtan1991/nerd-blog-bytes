@@ -1,11 +1,19 @@
-import React from 'react'
+import Home from "./Home.jsx";
+import Header from "./Header.jsx";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./Layout.jsx";
+import About from "./About.jsx";
+import Create from "./Create.jsx"
 
-const App = () => {
+
+export default function App() {
   return (
-    <div>
-      
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Create" element={<Create />}/>
+      </Route>
+    </Routes>
+  );
 }
-
-export default App
