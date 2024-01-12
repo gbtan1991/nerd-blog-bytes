@@ -4,7 +4,7 @@ const Home = () => {
 
     return (
         <>
-        <div className='bg-outer_space-500 h-screen'>
+        <div className='bg-neutral-900 h-screen'>
         <Header />
         </div>
         </>
