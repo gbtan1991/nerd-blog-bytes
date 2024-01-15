@@ -1,64 +1,52 @@
 import React from "react";
-import {
-  RiHomeLine,
-  RiTerminalWindowLine,
-  RiUser6Line,
-  RiPhoneLine,
-  RiArrowRightCircleLine,
-} from "react-icons/ri";
 import CallToAction from "./CallToAction";
+import { routes } from "../routes";
 
 const Navbar = () => {
-  const navLinks = [
-    {
-      id: 1,
-      urlName: "Home",
-      url: "/",
-      icon: <RiHomeLine />,
-    },
-    {
-      id: 2,
-      urlName: "Blogs",
-      url: "/blogs",
-      icon: <RiTerminalWindowLine />,
-    },
-    {
-      id: 3,
-      urlName: "About",
-      url: "/about",
-      icon: <RiUser6Line />,
-    },
-    {
-      id: 4,
-      urlName: "Contact",
-      url: "/contact",
-      icon: <RiPhoneLine />,
-    },
-    
-  ];
+  
   return (
-    <div className="font-roboto-mono">
-      <nav>
-        <ul className="flex items-center gap-5">
-        {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className="text-xl text-neutral-light-gray"
-            >
-              <a
-                href={link.url}
-                className="flex items-center gap-1 hover:text-primary-accent-purple hover:transition-transform hover:rotate-6 origin-center hover:ease-out"
-              >
-                {link.icon}
-                <h2>{link.urlName}</h2>
-              </a>
-            </li>
-          ))}
-          <CallToAction />
-        </ul>
+    <>
+    <ul className="hidden lg:flex lg:items-center gap-5 text-sm">
+      {routes.map(() ={
+        const { id, urlName, url, icon }
+        return (
+          <li>
+            <a href={url} className="flex items-center gap-1 hover:text-primary-accent-purple hover:transition-transform hover:rotate-6 origin-center hover:ease-out"
+        )
+      })}
+    </ul>
+    </>
+
+
+
+
+//     <div className="font-roboto-mono">
+//       <nav>
+//         <ul className="flex items-center gap-5">
+//         {routes.map((route) => {
+//           const { id, urlName, url, icon } = route;
+//           return (
+            
+//             <li
+//               key={id}
+//               className="text-xl text-neutral-light-gray"
+//             >
+//               <a
+//                 href={url}
+//                 className="flex items-center gap-1 hover:text-primary-accent-purple hover:transition-transform hover:rotate-6 origin-center hover:ease-out"
+//               >
+//                 {icon}
+//                 <h2>{urlName}</h2>
+//               </a>
+//             </li>
+//           );
+            
+// })}
+//           <CallToAction />
+//         </ul>
         
-      </nav>
-    </div>
+//       </nav>
+//     </div>
   );
 };
 

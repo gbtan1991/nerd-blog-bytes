@@ -1,12 +1,11 @@
 import React from 'react'
-import Logo from './Logo'
-import Navbar from './Navbar'
+import TopBar from './TopBar'
+
 
 const Header = () => {
   return (
-    <header className='flex items-center justify-around p-5'>
-      <Logo />
-      <Navbar /> 
+    <header>
+        <TopBar />
     </header>
   )
 }

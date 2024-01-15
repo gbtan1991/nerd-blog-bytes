@@ -1,33 +1,35 @@
-import { BiHomeAlt2 } from "react-icons/bi";
-import { FiPenTool } from "react-icons/fi";
-import { HiOutlineUserGroup } from "react-icons/hi2";
-import { MdOutlineContactPage } from "react-icons/md";
-import { GoPlusCircle } from "react-icons/go";
+import {
+  RiHomeLine,
+  RiTerminalWindowLine,
+  RiUser6Line,
+  RiPhoneLine,
+} from "react-icons/ri";
 
 export const routes = [
   {
-    title: "Home",
-    href: "#",
-    Icon: BiHomeAlt2,
+    id: 1,
+    urlName: "Home",
+    url: "/",
+    icon: <RiHomeLine />,
   },
   {
-    title: "Blogs",
-    href: "#",
-    Icon: FiPenTool,
+    id: 2,
+    urlName: "Blogs",
+    url: "/blogs",
+    icon: <RiTerminalWindowLine />,
   },
   {
-    title: "About",
-    href: "#",
-    Icon: HiOutlineUserGroup,
+    id: 3,
+    urlName: "About",
+    url: "/about",
+    icon: <RiUser6Line />,
   },
   {
-    title: "Contacts",
-    href: "#",
-    Icon: MdOutlineContactPage,
+    id: 4,
+    urlName: "Contact",
+    url: "/contact",
+    icon: <RiPhoneLine />,
   },
-  {
-    title: "Add Blogs",
-    href: "#",
-    Icon: GoPlusCircle,
-  },
+
+
 ];
