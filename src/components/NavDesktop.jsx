@@ -1,5 +1,6 @@
 import React from "react";
 import { routes } from "../routes";
+import CallToAction from "./CallToAction";
 
 const NavDesktop = () => {
   return (
@@ -16,6 +17,7 @@ const NavDesktop = () => {
             </a>
           </li>
         ))}
+        <li><CallToAction /> </li>
       </ul>
     </>
   );
