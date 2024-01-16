@@ -17,7 +17,7 @@ const NavDesktop = () => {
             </a>
           </li>
         ))}
-        <li><CallToAction /></li>
+        <li><CallToAction /> </li>
       </ul>
     </>
   );
