@@ -5,7 +5,7 @@ import CallToAction from "./CallToAction";
 const NavDesktop = () => {
   return (
     <>
-      <ul className="hidden lg:flex lg:items-center gap-5 text-sm">
+      <ul className="hidden lg:flex lg:items-baseline gap-5 text-sm">
         {routes.map(({ id, urlName, url, icon }) => (
           <li key={id}>
             <a
