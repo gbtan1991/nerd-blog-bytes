@@ -23,9 +23,9 @@ const MyComponent = () => {
     fetchData();
   }, []); // Empty dependency array means this effect runs once after the initial render
 
-  console.log(jsonData);
+  
   return (
-    <div className="text-white">
+    <div className="text-white mt-32">
       <h1>My React Component</h1>
 
       {hasData ? (

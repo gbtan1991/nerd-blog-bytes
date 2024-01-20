@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import MyComponent from "./myComponent";
+import MyComponent from "./MyComponent.jsx"
 
 const Home = () => {
   return (
