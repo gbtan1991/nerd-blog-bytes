@@ -1,8 +1,9 @@
-// MyComponent.js
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { json } from "react-router-dom";
 
-const MyComponent = () => {
+const BlogsList = () => {
   const [jsonData, setJsonData] = useState(null);
   const [hasData, setHasData] = useState(false);
 
@@ -19,38 +20,36 @@ const MyComponent = () => {
         console.error("Error fetching JSON:", error);
       }
     };
-
+    
     fetchData();
   }, []); // Empty dependency array means this effect runs once after the initial render
-
   
+  console.log(jsonData)
   return (
-    <div className="text-white mt-32">
-      <h1>My React Component</h1>
-
+    <div className="text-white mt-[56px] lg:mt-[121px]">
+      <h1>Blogs</h1>
+      <ul>
       {hasData ? (
         jsonData.map((blog, index) => (
-          <p key={index}>{blog.title}</p>
+          <li key={index}>
+            <h2>{blog.title}</h2>
+            <h3>{blog.author.name}</h3>
+            <p>{blog.publishedDate}</p>
+            {blog.tags.map((tag, tagIndex) => (
+              <div key={tagIndex}>
+                <span>{tag}</span>
+              </div>
+
+            ))}
+            
+          </li>
         ))
       ) : 
         <p>Loading</p>
       }
-      {/* {hasData ? 
-        {jsonData.map((blog, index) => {
-            
-            return    <p key={index}></p>
-        }
-            
-            
-
-        )
-
-        
-      : (
-        <p>Loading JSON data...</p>
-      )}} */}
+</ul>
     </div>
   );
 };
 
-export default MyComponent;
+export default BlogsList;
