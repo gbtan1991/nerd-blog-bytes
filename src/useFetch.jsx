@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const useFetch = (url) => {
-  const [data, setData] = useState(null);
+  const [blogsData, setBlogsData] = useState();
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(url);
-        setData(response.data);
+        const { data } = await axios.get(url);
+        setBlogsData(data); // Update blogData with the new data
+        
         setIsPending(false);
         setError(null);
       } catch (err) {
@@ -25,7 +26,7 @@ const useFetch = (url) => {
   
 
   return {
-    data, isPending, error
+    blogsData, isPending, error
   };
 };
 
