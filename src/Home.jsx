@@ -1,12 +1,12 @@
 import Header from "./components/Header";
-import MyComponent from "./MyComponent.jsx"
+import BlogsList from "./components/BlogsList";
 
 const Home = () => {
   return (
     <>
       <div className="bg-neutral-900 h-screen">
         <Header />
-        <MyComponent />
+        <BlogsList />
       </div>
     </>
   );

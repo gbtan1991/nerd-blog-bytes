@@ -1,39 +1,32 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const useFetch = ( url ) => {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+const useFetch = (url) => {
+  const [data, setData] = useState(null);
+  const [isPending, setIsPending] = useState(true);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        fetch(url)
-          .then((res) => {
-            if(!res.ok){
-              throw Error("Couldn't connect to the resources");
-            }
-            return res.json();
-            
-          })
-          .then((data) => {
-            setData(data);
-            setLoading(false);
-            setError(null);
-            
-          })
-          .catch(error => {
-            console.log("Error fetching data:", error);
-            setLoading(false);
-            setError(error.message)
-          }, 1000);
-      }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(url);
+        setData(response.data);
+        setIsPending(false);
+        setError(null);
+      } catch (err) {
+        setIsPending(false);
+        setError(err.message);
+      }
+    };
 
-  return { data, loading, error, setData }
-}
+    fetchData();
+  }, [url]);
 
-export default useFetch
+  
 
+  return {
+    data, isPending, error
+  };
+};
 
-
-
-
-
+export default useFetch;
