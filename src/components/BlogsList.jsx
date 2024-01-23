@@ -40,6 +40,7 @@ const BlogsList = () => {
 
           <div className="flex flex-col text-sm gap-5">
             <p className="px-2">Tags</p>
+            
             {blog.tags.map((tag, tagindex) => 
             <div key={tagindex}>
               
