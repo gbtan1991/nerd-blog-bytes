@@ -10,6 +10,8 @@ const NavLinks = () => {
           <li key={route.id}>
             
             <NavItem name={route.name} url={route.url} icon={route.icon} />
+
+            
            </li>
         ))}
       </div>
