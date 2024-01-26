@@ -6,10 +6,8 @@ import Header from './components/Header'
 
 export default function Home() {
   return (
-    <div>
-      <div className='bg-zinc-700'>
-      <Header />
-      </div>
+    <div className='bg-zinc-900 h-screen overflow-hidden'>
+      test
     </div>
   )
 }

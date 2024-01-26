@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
-import getConfig from "next/config";
+import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
      
-      <body className={inter.className} suppressHydrationWarning={true}>{children}</body>
+      <body className="font-roboto-mono text-zinc-50 relative overflow-hidden" suppressHydrationWarning={true}>
+        <Header />
+        <div className="mt-16 lg:mt-[120px]">
+        {children}
+        </div>
+        </body>
     </html>
   );
 }
