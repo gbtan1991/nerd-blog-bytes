@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import MainLayout from "./components/main-layout";
+import StoreProvider from "./StoreProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning={true}
       >
         <div className="mt-16 lg:mt-[120px]">
-          <MainLayout>{children}</MainLayout>
+          <StoreProvider>
+            <MainLayout>{children}</MainLayout>
+          </StoreProvider>
         </div>
       </body>
     </html>

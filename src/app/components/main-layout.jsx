@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "./Header";
 
 const MainLayout = ({ children }) => {
