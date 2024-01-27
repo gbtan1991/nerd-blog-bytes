@@ -54,19 +54,7 @@ const NavMobile = () => {
               })}
             </ul>
 
-            <motion.div
-              className="px-5"
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{
-                type: "",
-                stiffness: 100,
-                damping: 20,
-                delay: 0.5, // Adjust the delay as needed
-              }}
-            >
-              <CallToAction />
-            </motion.div>
+           
           </motion.div>
         )}
       </AnimatePresence>

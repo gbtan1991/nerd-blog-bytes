@@ -9,7 +9,7 @@ const NavDesktop = () => {
       <ul className="hidden lg:flex lg:flex-row lg:items-baseline gap-10 text-sm">
         
         <NavLinks />
-        <li><CallToAction /> </li>
+       
       </ul>
     </>
   );
