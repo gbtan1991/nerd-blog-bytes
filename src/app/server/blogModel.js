@@ -22,6 +22,6 @@ const blogSchema = new mongoose.Schema({
   coverPhoto: String,
 });
 
-const Blog = mongoose.model('Blog2', blogSchema);
+const Blog = mongoose.models.Blog ||  mongoose.model('Blog', blogSchema);
 
 export default Blog;

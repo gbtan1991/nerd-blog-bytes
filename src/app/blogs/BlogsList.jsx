@@ -1,22 +1,26 @@
+"use client"
+import { useState, useEffect } from 'react'
+import axios from 'axios';
+
+export default function BlogsList() {
+   
+  const [blogs, setBlogs] = useState([])
 
 
-import { dbConnect } from '../server/db'
-import Blog2 from '../server/blogModel'
 
+useEffect (() => {
+  const fetchBlogs = async () => {
+    try {
+      const {data} = await axios.get("/server/controller/getAllBlogs")
+      setBlogs(data.blog)
+      
+    } catch (error) {
+      console.log("Error", error)
+    };
+  } 
+  fetchBlogs(); 
+}, [])
 
-
-async function getBlogs() {
-  await dbConnect(); // Connect to the MongoDB database
-
-  
-  const blogs = await Blog2.find();
-  console.log(blogs)
-  return blogs;
-  
-}
-
-export default async function BlogsList() {
-   const blogs = await getBlogs()
 
 const truncateText = (text, maxLength) => {
   if (text.length <= maxLength) {
@@ -64,15 +68,3 @@ const truncateText = (text, maxLength) => {
 
 
 
-
-
-
-
-// return (
-//      <div className="text-white mt-[56px] py-5 mx-10 lg:mt-[121px] font-roboto-mono ">
-//     <h1 className="text-xl py-2">Blogs</h1>
-//     {isPending && <p>Loading...</p>}
-//     {error && <p>Error: {error}</p>}
-    
-
-//   </div>
