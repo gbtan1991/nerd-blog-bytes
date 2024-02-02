@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "nerdBlogBytes",
 
-  description: "Facinated Tech Blogs",
+  description: "Your Ultimate Nerd Haven",
   favicon: "/favicon.ico",
 
 };

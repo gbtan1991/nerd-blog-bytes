@@ -1,61 +1,63 @@
-"use client"
-import  { useState } from "react";
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import next from "next";
 
 const page = () => {
-
-  const containerText = [
-    "Welcome to NerdBlogBytes, your portal to the boundless expanse of nerd culture and the digital frontier. Dive into a realm where pixels meet prose, where bytes spark creativity, and where geeks reign supreme.",
-    "At NerdBlogBytes, we are your trusty guides through the labyrinth of the digital world. From the latest in tech innovations to deep dives into the realms of science fiction, fantasy, gaming, and beyond, our  eclectic team of passionate nerds is here to entertain, inform, and inspire.",
-    "Join us on a journey where we dissect the latest gadgets, review the hottest games, analyze blockbuster movies, and explore the far reaches of the internet for hidden gems and undiscovered wonders. ",
-    "Whether you're a seasoned geek or just dipping your toes into the vast ocean of nerd-dom, NerdBlogBytes offers something for everyone. So grab your favorite beverage, settle into your comfiest chair, and let the adventure begin. After all, in this digital age, knowledge is power, and curiosity is our compass. Welcome to NerdBlogBytes—where nerds rule the virtual realm!"
-    
-  ]
-
+  const containerText = [];
 
   const [containerSlider, setContainerSlider] = useState(0);
-  
+  const [buttonSelected, setButtonSelected] = useState(true);
 
   const handleButtonClick = (index) => {
-    
     setContainerSlider(index);
-    
   };
-  
 
   return (
-    <div className="bg-zinc-900 h-screen">
-      <h1 className="text-white text-center text-2xl font-bold pt-10">
-        nerdBlogBytes
-      </h1>
-      <p className="text-center">Unraveling the Digital Universe</p>
-      <div>
-        <Image
-          src="/images/hero-chip.png"
-          width={1000}
-          height={1000}
-          alt="ninja"
-          className="w-52 mx-auto mt-10"
-        />
-
-        <div className="flex flex-col items-center">
-          <p className="text-sm text-center">
-           {containerText[containerSlider]}
-          </p>
-          <div className="button-container flex flex-row gap-2">
-        <button onClick={() => handleButtonClick(0)} className="border border-zinc-600 bg-purple-700 w-5 h-5 rounded-full"></button>
-        <button onClick={() => handleButtonClick(1)} className="border border-zinc-600 bg-zinc-700 w-5 h-5 rounded-full"></button>
-        <button onClick={() => handleButtonClick(2)} className="border border-zinc-600 bg-zinc-700 w-5 h-5 rounded-full"></button>
-        <button onClick={() => handleButtonClick(3)} className="border border-zinc-600 bg-zinc-700 w-5 h-5 rounded-full"></button>
+    <div className="bg-zinc-900 h-screen w-full absolute -z-10">
+      
+      <div className="mt-16 lg:mt-44 flex flex-col lg:flex-row justify-center lg:justify-center items-center">   
+      <div className="lg:hidden">
+        <h1 className="text-white text-center text-2xl font-bold pt-10">
+          nerdBlogBytes
+        </h1>
+        <p className="text-center">Your Ultimate Nerd Haven!</p>
       </div>
-          
-
-       
-        </div>
-      </div>
+      <Image
+        src="/images/hero-chip.png"
+        width={1000}
+        height={1000}
+        alt="ninja"
+        className="w-52 lg:w-72 animate-pulse "
+      />
+          <div className="flex flex-col justify-start items-start lg:w-1/3">
+          <div className="">
+        <h1 className="text-white text-center text-2xl font-bold pt-10 hidden lg:block ">
+          nerdBlogBytes
+        </h1>
+        <p className="text-center hidden lg:block ">Your Ultimate Nerd Haven!</p>
+      
+          <p className="block text-sm text-center py-7 px-16 lg:p-7">
+             Welcome to NerdBlogBytes, your hub for geek culture and digital
+             exploration! From tech innovations to gaming reviews, we've got you
+             covered. Whether you're a seasoned geek or just starting out, join
+             us for a nerdy adventure!"
+           </p>
+           </div>
+           </div>
+         </div>
     </div>
   );
 };
 
 export default page;
+
+
+//       <div className="flex flex-col justify-center lg:flex-row items-center p-7 lg:gap-10">
+//         <div className="flex flex-col lg:flex-col-reverse ">
+//
+
+//        
+//       </div>
+//       <div></div>
+//     </div>
