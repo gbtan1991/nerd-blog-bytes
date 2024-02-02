@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import next from "next";
+import { scroll } from "framer-motion";
 
 const page = () => {
   const containerText = [];
@@ -14,9 +15,8 @@ const page = () => {
   };
 
   return (
-    <div className="bg-zinc-900 h-screen w-full absolute -z-10">
-      
-      <div className="mt-16 lg:mt-44 flex flex-col lg:flex-row justify-center lg:justify-center items-center">   
+    <div className="bg-zinc-900 h-screen w-full absolute -z-10 overflow-y-auto ">     
+      <div className="pt-8 flex flex-col lg:flex-row justify-center lg:justify-center items-center h-full">   
       <div className="lg:hidden">
         <h1 className="text-white text-center text-2xl font-bold pt-10">
           nerdBlogBytes
@@ -45,19 +45,15 @@ const page = () => {
            </p>
            </div>
            </div>
-         </div>
+      </div>
+      <div className="w-full bg-purple-950  h-full">   
+      
+      </div>
     </div>
+    
+
   );
 };
 
 export default page;
 
-
-//       <div className="flex flex-col justify-center lg:flex-row items-center p-7 lg:gap-10">
-//         <div className="flex flex-col lg:flex-col-reverse ">
-//
-
-//        
-//       </div>
-//       <div></div>
-//     </div>

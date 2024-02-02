@@ -23,6 +23,7 @@ module.exports = {
       fontFamily: {
         'roboto-mono': ['Roboto Mono', 'monospace']
       },
+      scrollbar: ['rounded']
     },
   },
   plugins: [],
