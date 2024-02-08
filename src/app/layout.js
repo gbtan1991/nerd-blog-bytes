@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body
-        className="font-roboto-mono text-zinc-50 relative overflow-hidden"
+        className="font-roboto-mono text-zinc-50 relative "
         suppressHydrationWarning={true}
       >
         <div className="mt-16 lg:mt-[120px]">
