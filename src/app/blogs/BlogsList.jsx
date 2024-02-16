@@ -39,7 +39,7 @@ const truncateText = (text, maxLength) => {
       <li key={index} className="border border-zinc-700 rounded-lg p-5 flex flex-col gap-2 lg:flex-row">
         <img src={blog.coverPhoto} alt={`${blog.title} cover photo`} className="rounded-md shadow-sm shadow-purple-950 w-fit h-fit lg:w-40"/>
         
-        
+        <div className='flex flex-col gap-4'>
         <div className="py-2 flex flex-col gap-2">       
         <h2 className="font-medium">{blog.title}</h2>
         <p className="font-light text-sm font-mono">{blog.author.name}</p>
@@ -57,7 +57,7 @@ const truncateText = (text, maxLength) => {
           </div>
           )}
           </div>
-          
+          </div>
       </li>)}
     </ul>
     </div>
